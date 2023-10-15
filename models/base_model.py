@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""class BaseModel that defines all common attributes/methods
-for other classes"""
+"""class BaseModel that defines all common attributes/methods for other classes"""
 
 
 from uuid import uuid4
+
 from datetime import datetime
 
 
@@ -13,7 +13,8 @@ class BaseModel:
     def __init__(self, *args, **kwargs):
         """
         constructor of the class
-        Initialize BaseModel class with provided argumets"""
+        Initialize BaseModel 
+        class with provided argumets"""
 
         from models import storage
         if not kwargs:
@@ -46,7 +47,6 @@ class BaseModel:
     def to_dict(self):
         """
         returns a dictionary representation of the instance:
-
         - by using self.__dict__, only instance attributes set will be returned
         - a key __class__ must be added to this dictionary
         - created_at and updated_at must be converted to string object in ISO

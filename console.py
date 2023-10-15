@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Defines a Module for the HBNBCommand"""
+"""Defines a Module for the HBNB Command  ( the console)"""
+"""making some changes"""
 
 import cmd
 import os
@@ -17,12 +18,13 @@ from models.review import Review
 
 
 class HBNBCommand(cmd.Cmd):
-    """HBNBCommand class"""
+    """HBNB Command classssss"""
     prompt = '(hbnb) '
 
     def __init__(self, *args, **kwargs) -> None:
         """
         Initializes a new instance of HBNBCommand class.
+
 
         Args:
             *args: Variable length argument list.
@@ -38,7 +40,7 @@ class HBNBCommand(cmd.Cmd):
 
     def get_class_names(self):
         """
-        Dynamically discover class names that inherit from BaseModel.
+        Dynamically discover class names that inherit from BaseModel. yeah basemodel
         """
         class_names = {}
         for _, file_name, _ in pkgutil.iter_modules(['models']):
@@ -55,6 +57,7 @@ class HBNBCommand(cmd.Cmd):
 
         This method parses the given command line and executes the
         corresponding command based on the syntax rules.
+        default classe.
 
         Usage: <class name>.<command name>(<arg1>, <arg2>, ...)
 
@@ -86,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
         print("Hello")
 
     def do_quit(self, line) -> bool:
-        """Quit: command to exit the program
+        """Quit: command to exit or quit  the program
         """
         return True
 
@@ -134,7 +137,8 @@ class HBNBCommand(cmd.Cmd):
         """
         Usage: show <class name> <id>
 
-        Prints the string rep. of an instance based on the class name & id.
+        Prints the string rep. of an instance 
+        based on the class name & id.
 
         Ex: $ show BaseModel 1234-1234-1234.
         """
@@ -187,7 +191,8 @@ class HBNBCommand(cmd.Cmd):
         """
         Usage: all <class name>
 
-        Prints all string rep. of all instances based or not on the class name
+        Prints all string rep. 
+        of all instances based or not on the class name
 
         Ex: $ all BaseModel or $ all.
         """
@@ -211,7 +216,8 @@ class HBNBCommand(cmd.Cmd):
 
         Updates an instance based on the class name and id by adding or
         updating attribute(name & value) or using a dictionary representation
-        save the change into the JSON file)
+        save the change 
+        into the JSON file)
 
         Example:
         $ update BaseModel 1234-1234-1234 email "aibnb@mail.com"
@@ -263,7 +269,7 @@ class HBNBCommand(cmd.Cmd):
         """
         Usage: count <class_name>
 
-        Count the number of instances of a given class.
+        Count the number of instances of the given class.
 
         Ex: $ count BaseModel or $ count User
         """
@@ -278,6 +284,9 @@ class HBNBCommand(cmd.Cmd):
             if obj.__class__.__name__ == args[0]:
                 count += 1
         print(count)
+        """
+        i just add that comment
+        """
 
 
 if __name__ == '__main__':

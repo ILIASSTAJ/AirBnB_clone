@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-FileStorage class model
+FileStorage class
+model
 """
 import json
 
@@ -31,8 +32,7 @@ class FileStorage:
 
     def new(self, obj):
         """
-        function that sets in __objects
-        the `obj` with key <obj class name>.id
+        function that sets in __objects  the `obj` with key <obj class name>.id
         """
         self.__objects["{}.{}".format(obj.__class__.__name__, obj.id)] = obj
 
@@ -49,8 +49,7 @@ class FileStorage:
 
     def reload(self):
         """
-        function that deserializes the JSON
-        file to __objects
+        function that deserializes the JSON file to __objects
         nb: Only if it exists!
         """
         try:

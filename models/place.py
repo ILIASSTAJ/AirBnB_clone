@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""model for the Place"""
+"""model for the Placeeee"""
+
 from models.base_model import BaseModel
 
 
