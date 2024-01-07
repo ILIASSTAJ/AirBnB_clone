@@ -10,7 +10,6 @@ import unittest
 from unittest.mock import patch
 from time import sleep
 
-
 class Test_init(unittest.TestCase):
     """ Class for unittest of __init__ """
 
